@@ -1,153 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>Flora's Webpage Example</title>
-		<meta charset="utf-8">
-  		<meta name="viewport" content="width=device-width, initial-scale=1">
-  		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  		<link rel="stylesheet" type="text/css" href="assets/css/mystyle.css">
-  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-		
-  		
+<head>
 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" media="screen" href="css/style.css">
+  
+	<title>Flora's Webpage Example</title>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	
+  	<!-- bootstrap -->
+  	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  
+</head>
+<body>
+	<div class="container">
 
-	</head>
-	<body>
-
-		<div class="container">
-		<h1>Welcome!! :D</h1>
-		<div class="btn-group">
-    		<a href="home.html" class="btn btn-info" role="button">Home</a>
-    		<a href="food.html" class="btn btn-info" role="button">Food</a>
-    		<div class="btn-group">
-				<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-				School <span class="caret"></span>
-				</button>
-				<ul class="dropdown-menu" role="menu">
-					<li><a href="dorm-life.html">Dorm Life</a></li>
-					<li><a href="#">Work Life</a></li>
-				</ul>
-			</div>
-    		<div class="btn-group">
-				<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-				Travel <span class="caret"></span>
-				</button>
-				<ul class="dropdown-menu" role="menu">
-					<li><a href="asb-sd.html">Alternative Spring Break: South Dakota</a></li>
-					<li><a href="#">Girls Who Code: Atlanta, GA and Austin, TX</a></li>
-				</ul>
-			</div>
-		</div>
-
-		<div class="container">
-  			<br>
-  			
-  			<p>
-  			Come explore my life in college! - Flora Wang
-  			</p>
-  			<div id="myCarousel" class="carousel slide" data-ride="carousel">
-    		<!-- Indicators -->
-			<ol class="carousel-indicators">
-			  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-			  <li data-target="#myCarousel" data-slide-to="1"></li>
-			  <li data-target="#myCarousel" data-slide-to="2"></li>
-			  <li data-target="#myCarousel" data-slide-to="3"></li>
-			</ol>
-
-			<!-- Wrapper for slides -->
-			<div class="carousel-inner" role="listbox">
-				<div class="item active">
-					<img src="stanford.jpg" alt="Stanford" width="200" height="345">
-				</div>
-
-				<div class="item">
-					<img src="les.jpg" alt="Chania" 
-					width="200" height="345">
-				</div>
-
-				<div class="item">
-					<img src="backpacking.jpg" 
-					alt="backpacking" width="200" height="345">
-				</div>
-
-				<div class="item">
-					<img src="football.jpg" alt="things to do" width="200" height="100">
-					</div>
-			</div>
-
-			<!-- Left and right controls -->
-			<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-			  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-			  <span class="sr-only">Previous</span>
-			</a>
-			<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-			  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-			  <span class="sr-only">Next</span>
-			</a>
-		</div>
-<!-- 	</div> -->
-<br>
-<br>
-<h2> About Me </h2>
-<p> My name is Flora Wang. I am entering my second year at Stanford University, intending to study
-some combination of computer science and biology. I was born and raised in the Bay Area. My hobbies include running 
-and traveling.
-</p>
-
-
-
-<br>
-<br>
-<h2> Adventure is out there. </h2>
-<p>   -Where I have been this year. </p>
-
-<!-- Google Maps API -->
-	<div id="map"></div>
-    <script>
-  		function initMap() {
-  			//var mapDiv = document.getElementById('map');
-    		
-    		
-    		var centerUS = {lat: 39.8282, lng: -102.5};
-			var map = new google.maps.Map(document.getElementById('map'), {
-    			zoom: 4,
-    			center: centerUS
-  			});
-  			
-  			
-  			var stanfordLatLng = {lat: 37.4241611, lng: -122.1630692};
-  			addMarker(stanfordLatLng, map);
-  			
-  			var dalyCityLatLng = {lat: 37.6879241, lng: -122.47020789999999};
-  			addMarker(dalyCityLatLng, map);
-  			
-  			var laJollaLatLng = {lat: 32.8328112, lng: -117.2712717};
-  			addMarker(laJollaLatLng, map);
-  			
-  			var rosebudLatLng = {lat: 43.2327824, lng: -100.85347790000003};
-  			addMarker(rosebudLatLng, map);
-  			
-  			var atlantaLatLng = {lat: 33.7489954, lng: -84.3879824};
-  			addMarker(atlantaLatLng, map);
-  			
-  			var austinLatLng = {lat: 30.267153, lng: -97.74306079999997};
-  			addMarker(austinLatLng, map);
-  		}
-  		  		
-  		function addMarker(location, map) {
-  			var marker = new google.maps.Marker({
-  				position: location,
-  				map: map
-  			});
-  		}
-  		
-	</script>
-    <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
-        async defer></script>
-    <br>
-    <br>
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+<!--             <img class="navbar-brand page-scroll" src="img/logo/logo.png" alt=""> -->
+            <a class="navbar-brand page-scroll" href="#home">FLORA WANG</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">  
+            	<li class="active">
+                    <a class="page-scroll" href="#about">About</a>
+                </li> 
+                <li class="">
+                    <a class="page-scroll" href="#experiences">Experiences</a>
+                </li> 
+                <li class="">
+                    <a class="page-scroll" href="#life">Life</a>
+                </li>         
+                <li class="">
+                    <a class="page-scroll" href="#projects">Projects</a>
+                </li>
+                <li class="">
+                    <a class="page-scroll" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
     </div>
+    <!-- /.container -->
+</nav>
+
+<!-- Home -->
+<section id="home">
+<!-- Header -->
+    <div id="particles-js">
+    	<div id = "particles-header" class="intro-header">
+    		<div class="container">
+    		</div>
+        </div>
+    </div>
+</section>
+<!-- /.home -->
+
+
+ <!-- About Section -->
+    <section id="about" class="container content-section text-center">
+        <div id="about_change" class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+              <br/><br/>
+              <h2>About Me</h2>
+              <hr class="intro-divider">
+              <br/>
+              <font size="4px">
+                <p>Hi!</p>
+                <p>My name is Flora.</p>
+                <p>I am a sophomore at Stanford University.</p> 
+                <p>Although undeclared, I am interested in the intersection between computer science and medicine.</p>
+                
+                <br/>
+              </font>
+            </div>
+        </div>
+    </section>
+ <!-- /.about -->
+
+</section>
+		<section id="experiences">
+<!-- Page Content -->
+         <div class="content-section-a">
+
+            <div class="container">
+                <div class="row">
+                    <h2 class="category-heading">Experiences</h2>
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-5 col-sm-6">
+                        <h2 class="section-heading">Teaching Assistant</h2>
+                        <div class="lead">
+
+<ul>
+  <li>
+    Work with the Mobile Infrastructure Team @ Uber to support in house mobile developer and release team to ensure the development efficiency as well as the app quality
+  </li>
+  <li>
+    <p>Build internal tools for mobile developers to investigate test failures on Uber’s continious intergration platform</p>
+  </li>
+  <li>
+    <p>Engineer in full stack: React.js frontend and Python flask backend with test log parsing and server routing</p>
+  </li>
+</ul>
+</div>
+                     </div>
+                    <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                        <img class="img-responsive center-block" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/GWC_logo_2016_.png/220px-GWC_logo_2016_.png" 
+                        alt="Girls Who Code Logo">
+                    </div>
+                </div>
+
+            </div>
+            <!-- /.container -->
+
+        </div>
+        <!-- /.content-section-a -->
+        
+
+        <div class="content-section-b">
+
+            <div class="container">
+                <div class="row">
+                    <h2 class="category-heading">Experiences</h2>
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
+                        <h2 class="section-heading">Stanford Alternative Spring Break <br>Participant</h2>
+                        <div class="lead"><ul>
+  <li>
+    <p>Conduct interdisciplinary research in computer science, biology and linguistic using statistic machine learning and deep learning approach with Professor Pengyu Hong at Brandeis University</p>
+  </li>
+  <li>
+    <p>Tackle the NP-complete graph matching problem with a graduated assignment implementation</p>
+  </li>
+  <li>
+    <p>Optimize automatic graph feature extraction and apply the model in biology domain involving proteins and neurons</p>
+  </li>
+  <li>
+    <p>Implement computational linguistic models using word vector, neural network and other statistical tools to match sentences in the same conversational context</p>
+  </li>
+  <li>
+    <p>Selected as 16’-17’ Jerome A. Schiff Undergraduate Fellows for my innovative <a href="http://www.cs.brandeis.edu/~weschin/Schiff-Proposal.pdf">research</a> in machine learning and biology</p>
+  </li>
+</ul>
+</div>
+                    </div>
+                    <div class="col-lg-5 col-sm-pull-6  col-sm-6">
+                        <img class="img-responsive center-block" src="img/exp/1-1-2-exp.jpg" alt="">
+                    </div>
+                </div>
+
+            </div>
+            <!-- /.container -->
+
+        </div>
+        <!-- /.content-section-b -->
+
+
+
+<!-- scripts -->
+<script src="../particles.js"></script>
+<script src="js/app.js"></script>
+
+<!-- stats.js -->
+<!-- <script src="js/lib/stats.js"></script> -->
+</section>
+
 </body>
 </html>
-
